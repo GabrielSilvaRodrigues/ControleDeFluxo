@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class App {
     private final static Scanner sc = new Scanner(System.in);
-    private static final Contador contados = new Contador();
+    private static final Contador contador = new Contador();
     public static void main(String[] args) throws Exception {
         try {
             requisitarOsParametros().contar();
