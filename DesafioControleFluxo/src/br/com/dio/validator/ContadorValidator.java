@@ -15,7 +15,7 @@ public class ContadorValidator {
         if(IntIsBlank(contador.getParametroDois())) {
             throw new ParametrosInvalidosException("Informe um segundo parâmetro válido!");
         }
-        if(contador.getParametroUm() > contador.getParametroDois()) {
+        if(contador.getParametroUm() >= contador.getParametroDois()) {
             throw new ParametrosInvalidosException("O primeiro parâmetro deve ser menor que o segundo!");
         }
     }
