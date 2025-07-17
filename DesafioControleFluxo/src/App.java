@@ -8,8 +8,17 @@ public class App {
     private final static Scanner sc = new Scanner(System.in);
     private static final Contador contados = new Contador();
     public static void main(String[] args) throws Exception {
-        sc.nextLine();
-        requisitarOsParametros();
+        try {
+            requisitarOsParametros().contar();
+            System.out.println("Contagem finalizada!");
+        } catch (ParametrosInvalidosException e) {
+            System.out.println("Erro: " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Ocorreu um erro inesperado: " + e.getMessage());
+        }
+        finally {
+            sc.close();
+        }
     }
     private static Contador requisitarOsParametros() throws ParametrosInvalidosException{
         System.out.println("Informe o primeiro parâmetro: ");
